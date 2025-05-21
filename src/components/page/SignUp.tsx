@@ -24,12 +24,19 @@ const SignUpPage = () => {
 						btnType={'submit'}
 						label={'Sign Up'}
 						handleClick={handleClick}
-						variant={'login'}
+						variant={'signup'}
 					/>
+					<span className="text-center w-full mt-6">
+						Already have an count?{' '}
+						<a href="#" className="underline">
+							Log in
+						</a>
+					</span>
 				</SignUp>
+
 				<div className="flex flex-col items-start h-[900px] justify-between">
 					<div>
-						<h1>Design with us</h1>
+						<h1>Origams</h1>
 						<p className="text-3xl max-w-xl h-max text-white opacity-80">
 							Access to thousands of design resources and templates
 						</p>

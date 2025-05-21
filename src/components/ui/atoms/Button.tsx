@@ -10,8 +10,8 @@ const Button = ({
 	handleClick: () => void;
 }) => {
 	const buttonFor = {
-		login: 'py-[20px] px-[2px] rounded-[40px] font-bold text-bold mt-12 w-full',
-		signup: 'py-[15px] px-[40px] rounded-4xl',
+		login: '',
+		signup: 'py-[20px] px-[2px] rounded-[40px] font-bold text-bold mt-12 w-full transition duration-300',
 	};
 
 	return (
