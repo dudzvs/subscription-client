@@ -4,14 +4,12 @@ import Input from '../atoms/Input.tsx';
 const InputGroup = ({
 	type,
 	inputLabel,
+	handleChange,
 }: {
 	type: 'text' | 'email' | 'number' | 'checkbox' | 'password';
 	inputLabel: string;
+	handleChange: () => void;
 }) => {
-	const handleChange = () => {
-		console.log('Hello');
-	};
-
 	return (
 		<>
 			{type === 'checkbox' ? (
