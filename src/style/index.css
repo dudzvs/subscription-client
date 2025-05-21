@@ -13,6 +13,7 @@
 	h1 {
 		color: var(--heading-color);
 		font-size: var(--main-heading-fs);
+		font-weight: bold;
 	}
 
 	p {
@@ -23,6 +24,8 @@
 	h3 {
 		font-size: var(--sub-heading-fs);
 		color: var(--primary-color);
+		margin-bottom: 2em;
+		font-weight: bold;
 	}
 
 	label {
