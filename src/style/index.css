@@ -2,43 +2,51 @@
 @import 'tailwindcss';
 
 @layer base {
-    html {
-        font-family: var(--font-poppins), sans-serif;
-    }
+	html {
+		font-family: var(--font-poppins), sans-serif;
+	}
 
-    body {
-        background-color: var(--bgc-page);
-    }
+	body {
+		background-color: var(--bgc-page);
+	}
 
-    h1 {
-        color: var(--heading-color);
-        font-size: var(--main-heading-fs);
-    }
+	h1 {
+		color: var(--heading-color);
+		font-size: var(--main-heading-fs);
+	}
 
-    p {
-        color: var(--primary-color);
-        font-size: var(--text-default-fs);
-    }
+	p {
+		color: var(--primary-color);
+		font-size: var(--text-default-fs);
+	}
 
-    form {
-        h3 {
-            font-size: var(--sub-heading-fs);
-            color: var(--primary-color);
+	h3 {
+		font-size: var(--sub-heading-fs);
+		color: var(--primary-color);
+	}
+
+	label {
+		font-size: var(--text-xsm);
+		color: var(--secondary-color);
+	}
+
+	input:not([type="checkbox"]) {
+		background-color: transparent;
+        height: 56px;
+        border: 1px solid var(--border-color);
+        border-radius: 12px;
+        width: 100%;
+        padding: 12px;
+	}
+
+
+	button {
+		background-color: var(--bgc-ui);
+		color: var(--white);
+        max-width: 164px;
+        cursor: pointer;
+        &:hover {
+            opacity: 0.5;
         }
-
-        label {
-            font-size: var(--text-xsm);
-            color: var(--secondary-color);
-        }
-    }
-
-    button {
-        background-color: var(--bgc-ui);
-        color: var(--white);
-
-        :hover {
-            background-color: var(--bgc-ui-hover);
-        }
-    }
-
+	}
 }
