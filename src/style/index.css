@@ -1,0 +1,44 @@
+@import './theme.css';
+@import 'tailwindcss';
+
+@layer base {
+    html {
+        font-family: var(--font-poppins), sans-serif;
+    }
+
+    body {
+        background-color: var(--bgc-page);
+    }
+
+    h1 {
+        color: var(--heading-color);
+        font-size: var(--main-heading-fs);
+    }
+
+    p {
+        color: var(--primary-color);
+        font-size: var(--text-default-fs);
+    }
+
+    form {
+        h3 {
+            font-size: var(--sub-heading-fs);
+            color: var(--primary-color);
+        }
+
+        label {
+            font-size: var(--text-xsm);
+            color: var(--secondary-color);
+        }
+    }
+
+    button {
+        background-color: var(--bgc-ui);
+        color: var(--white);
+
+        :hover {
+            background-color: var(--bgc-ui-hover);
+        }
+    }
+
+}
