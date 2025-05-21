@@ -10,6 +10,10 @@
 		background-color: var(--bgc-page);
 	}
 
+	header {
+		background-color: var(--white);
+	}
+
 	h1 {
 		color: var(--heading-color);
 		font-size: var(--main-heading-fs);
