@@ -1,6 +1,12 @@
 import React from 'react';
 
-const SignUp = ({ children, submitFn }: { children: React.ReactNode; submitFn: () => void }) => {
+const SignUp = ({
+	children,
+	submitFn,
+}: {
+	children: React.ReactNode;
+	submitFn: (e: React.FormEvent<HTMLFormElement>) => void;
+}) => {
 	return (
 		<form
 			onSubmit={submitFn}
