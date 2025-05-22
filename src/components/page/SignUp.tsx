@@ -1,8 +1,7 @@
 import InputGroup from '../ui/molecules/InputGroup.tsx';
 import Button from '../ui/atoms/Button.tsx';
 import SignUp from '../layout/SignUp.tsx';
-import React, { useEffect } from 'react';
-import { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const SignUpPage = () => {
 	const [formData, setFormData] = useState({
@@ -28,8 +27,34 @@ const SignUpPage = () => {
 		}));
 	}
 
-	function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+	async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
 		e.preventDefault();
+
+		try {
+			const response = await fetch('http://localhost:5500/api/v1/auth/sign-up', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+				},
+				body: JSON.stringify(formData),
+			});
+
+			if (!response.ok) {
+				const data = await response.json();
+				console.log(data.error);
+				return;
+			}
+
+			setFormData({
+				username: '',
+				email: '',
+				password: '',
+				useTerms: false,
+				marketingTerms: false,
+			});
+		} catch (err) {
+			console.log(err);
+		}
 	}
 
 	return (
