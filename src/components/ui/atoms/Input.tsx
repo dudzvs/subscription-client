@@ -26,7 +26,7 @@ const Input = ({
 					? { checked: inputValue as boolean }
 					: { value: inputValue as string | number })}
 			/>
-			{error && <span className="text-red-500 text-sm">{errorText}</span>}
+			{error && <span className="text-red-500 text-xs absolute top-[88px]">{errorText}</span>}
 		</>
 	);
 };

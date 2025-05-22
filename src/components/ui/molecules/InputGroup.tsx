@@ -23,7 +23,7 @@ const InputGroup = ({
 		<>
 			{type === 'checkbox' ? (
 				<div className="flex flex-col">
-					<div className="flex items-baseline gap-2 mt-4">
+					<div className="flex items-baseline gap-2">
 						<Input
 							inputType={type}
 							inputName={inputLabel}
