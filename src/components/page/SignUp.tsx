@@ -45,7 +45,7 @@ const SignUpPage = () => {
 				},
 				body: JSON.stringify(formData),
 			});
-			const { error } = await response.json();
+			const { error, token } = await response.json();
 
 			const updatedErrors = {
 				username: { error: false, msg: '' },
@@ -67,8 +67,6 @@ const SignUpPage = () => {
 				setOnError(updatedErrors);
 				return;
 			}
-
-			const { token } = await response.json();
 			localStorage.setItem('token', token);
 
 			setFormData({
