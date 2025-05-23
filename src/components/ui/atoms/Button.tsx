@@ -7,7 +7,7 @@ const Button = ({
 	btnType: 'submit' | 'button' | 'reset';
 	label: string;
 	variant: 'login' | 'signup';
-	handleClick: () => void;
+	handleClick?: () => void;
 }) => {
 	const buttonFor = {
 		login: 'px-[25px] py-[12px] rounded transition duration-300 font-bold w-full',

@@ -2,6 +2,7 @@ import InputGroup from '../ui/molecules/InputGroup.tsx';
 import Button from '../ui/atoms/Button.tsx';
 import FormWrapper from '../layout/Form.tsx';
 import React, { useState } from 'react';
+import { NavLink } from 'react-router';
 
 const SignUpPage = () => {
 	const [formData, setFormData] = useState({
@@ -136,9 +137,9 @@ const SignUpPage = () => {
 			/>
 			<span className="text-center w-full mt-6">
 				Already have an count?{' '}
-				<a href="#" className="underline">
+				<NavLink to="/login" className="underline">
 					Log in
-				</a>
+				</NavLink>
 			</span>
 		</FormWrapper>
 	);
