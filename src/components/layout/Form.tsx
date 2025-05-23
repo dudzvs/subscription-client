@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SignUp = ({
+const FormWrapper = ({
 	children,
 	submitFn,
 }: {
@@ -11,10 +11,10 @@ const SignUp = ({
 		<form
 			onSubmit={submitFn}
 			method="POST"
-			className="bg-white w-2xl rounded-2xl py-24 items-start flex flex-col gap-10 px-24">
+			className="bg-white w-2xl rounded-2xl py-16 items-start flex flex-col gap-10 px-24">
 			{children}
 		</form>
 	);
 };
 
-export default SignUp;
+export default FormWrapper;

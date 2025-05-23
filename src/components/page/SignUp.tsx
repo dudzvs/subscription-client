@@ -1,7 +1,7 @@
 import InputGroup from '../ui/molecules/InputGroup.tsx';
 import Button from '../ui/atoms/Button.tsx';
-import SignUp from '../layout/SignUp.tsx';
-import React, { useEffect, useState } from 'react';
+import AuthLayout from '../layout/Form.tsx';
+import React, { useState } from 'react';
 
 const SignUpPage = () => {
 	const [formData, setFormData] = useState({
@@ -17,8 +17,6 @@ const SignUpPage = () => {
 		password: { error: false, msg: '' },
 		terms: { error: false, msg: '' },
 	});
-
-	useEffect(() => {});
 
 	function handleClick() {
 		console.log('clicked');
@@ -82,8 +80,8 @@ const SignUpPage = () => {
 	}
 
 	return (
-		<div className="flex flex-row-reverse w-full p-16 justify-evenly items-baseline">
-			<SignUp submitFn={handleSubmit}>
+		<div className="flex">
+			<AuthLayout submitFn={handleSubmit}>
 				<h3>SignUp</h3>
 				<InputGroup
 					inputLabel={'username'}
@@ -143,17 +141,7 @@ const SignUpPage = () => {
 						Log in
 					</a>
 				</span>
-			</SignUp>
-
-			<div className="flex flex-col items-start h-[900px] justify-between">
-				<div>
-					<h1>Origams</h1>
-					<p className="text-3xl max-w-xl h-max text-white opacity-80">
-						Access to thousands of design resources and templates
-					</p>
-				</div>
-				<img className="" src="/images/Illustration.png" alt="illustration" />
-			</div>
+			</AuthLayout>
 		</div>
 	);
 };
