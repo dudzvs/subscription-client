@@ -1,4 +1,5 @@
 import SignUpPage from './components/page/SignUp.tsx';
+import SignInPage from './components/page/SignIn.tsx';
 import { Route, Routes } from 'react-router';
 import AuthLayout from './components/layout/Auth.tsx';
 import NavBar from './components/ui/molecules/NavBar.tsx';
@@ -14,7 +15,7 @@ function App() {
 					{/*<Route index element={<Home />} />*/}
 					<Route element={<AuthLayout />}>
 						<Route path="/register" element={<SignUpPage />} />
-						{/*<Route path="login" element={<SignInPage />} />*/}
+						<Route path="/login" element={<SignInPage />} />
 					</Route>
 				</Routes>
 			</main>

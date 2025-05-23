@@ -1,6 +1,6 @@
 import InputGroup from '../ui/molecules/InputGroup.tsx';
 import Button from '../ui/atoms/Button.tsx';
-import AuthLayout from '../layout/Form.tsx';
+import FormWrapper from '../layout/Form.tsx';
 import React, { useState } from 'react';
 
 const SignUpPage = () => {
@@ -75,74 +75,72 @@ const SignUpPage = () => {
 				marketingTerms: false,
 			});
 		} catch (err) {
-			console.log(err);
+			console.log('erro:' + err);
 		}
 	}
 
 	return (
-		<div className="flex">
-			<AuthLayout submitFn={handleSubmit}>
-				<h3>SignUp</h3>
-				<InputGroup
-					inputLabel={'username'}
-					type={'text'}
-					formValue={formData.username}
-					handleChange={handleChange}
-					error={onError.username.error}
-					errorMessage={onError.username.msg}
-				/>
-				<InputGroup
-					inputLabel={'email'}
-					type={'email'}
-					formValue={formData.email}
-					handleChange={handleChange}
-					error={onError.email.error}
-					errorMessage={onError.email.msg}
-				/>
-				<InputGroup
-					inputLabel={'password'}
-					type={'password'}
-					formValue={formData.password}
-					handleChange={handleChange}
-					error={onError.password.error}
-					errorMessage={onError.password.msg}
-				/>
-				<InputGroup
-					type={'checkbox'}
-					inputLabel={'useTerms'}
-					termsText={
-						'By creating an account, I agree to our Terms of use and Privacy Policy '
-					}
-					formValue={formData.useTerms}
-					handleChange={handleChange}
-					error={onError.terms.error}
-					errorMessage={onError.terms.msg}
-				/>
-				<InputGroup
-					type={'checkbox'}
-					inputLabel={'marketingTerms'}
-					termsText={
-						'By creating an account, I am also consenting to receive SMS \n' +
-						'messages and emails, including product new feature updates, \n' +
-						'events, and marketing promotions'
-					}
-					formValue={formData.marketingTerms}
-					handleChange={handleChange}
-				/>
-				<Button
-					btnType={'submit'}
-					label={'Sign Up'}
-					handleClick={handleClick}
-					variant={'signup'}
-				/>
-				<span className="text-center w-full mt-6">
-					Already have an count?{' '}
-					<a href="#" className="underline">
-						Log in
-					</a>
-				</span>
-			</AuthLayout>
-		</div>
+		<FormWrapper submitFn={handleSubmit}>
+			<h3>SignUp</h3>
+			<InputGroup
+				inputLabel={'username'}
+				type={'text'}
+				formValue={formData.username}
+				handleChange={handleChange}
+				error={onError.username.error}
+				errorMessage={onError.username.msg}
+			/>
+			<InputGroup
+				inputLabel={'email'}
+				type={'email'}
+				formValue={formData.email}
+				handleChange={handleChange}
+				error={onError.email.error}
+				errorMessage={onError.email.msg}
+			/>
+			<InputGroup
+				inputLabel={'password'}
+				type={'password'}
+				formValue={formData.password}
+				handleChange={handleChange}
+				error={onError.password.error}
+				errorMessage={onError.password.msg}
+			/>
+			<InputGroup
+				type={'checkbox'}
+				inputLabel={'useTerms'}
+				termsText={
+					'By creating an account, I agree to our Terms of use and Privacy Policy '
+				}
+				formValue={formData.useTerms}
+				handleChange={handleChange}
+				error={onError.terms.error}
+				errorMessage={onError.terms.msg}
+			/>
+			<InputGroup
+				type={'checkbox'}
+				inputLabel={'marketingTerms'}
+				termsText={
+					'By creating an account, I am also consenting to receive SMS \n' +
+					'messages and emails, including product new feature updates, \n' +
+					'events, and marketing promotions'
+				}
+				formValue={formData.marketingTerms}
+				handleChange={handleChange}
+			/>
+			<Button
+				btnType={'submit'}
+				label={'Register'}
+				handleClick={handleClick}
+				variant={'signup'}
+			/>
+			<span className="text-center w-full mt-6">
+				Already have an count?{' '}
+				<a href="#" className="underline">
+					Log in
+				</a>
+			</span>
+		</FormWrapper>
 	);
 };
 export default SignUpPage;

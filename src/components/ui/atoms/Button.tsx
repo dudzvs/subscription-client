@@ -10,7 +10,7 @@ const Button = ({
 	handleClick: () => void;
 }) => {
 	const buttonFor = {
-		login: 'px-[25px] py-[12px] rounded transition duration-300 font-bold',
+		login: 'px-[25px] py-[12px] rounded transition duration-300 font-bold w-full',
 		signup: 'py-[25px] px-[40px] rounded-[40px] font-bold text-bold mt-4 transition duration-300',
 	};
 
