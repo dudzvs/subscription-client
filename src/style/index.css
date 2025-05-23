@@ -12,10 +12,20 @@
 
 	header {
 		background-color: var(--white);
+		position: fixed;
+		display: grid;
+		width: 100%;
+		top: 0;
 	}
 
 	h1 {
 		color: var(--heading-color);
+		font-size: var(--main-heading-fs);
+		font-weight: bold;
+	}
+
+	h2 {
+		color: black;
 		font-size: var(--main-heading-fs);
 		font-weight: bold;
 	}
