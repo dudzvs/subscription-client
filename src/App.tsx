@@ -5,11 +5,11 @@ import NavBar from './components/ui/molecules/NavBar.tsx';
 
 function App() {
 	return (
-		<div className="h-screen flex flex-col ">
-			<header>
+		<div className=" flex flex-col h-screen ">
+			<header className="mb-10 md:mb-0">
 				<NavBar />
 			</header>
-			<main className="my-auto flex">
+			<main className="m-auto flex">
 				<Routes>
 					{/*<Route index element={<Home />} />*/}
 					<Route element={<AuthLayout />}>

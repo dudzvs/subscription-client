@@ -12,8 +12,10 @@
 
 	header {
 		background-color: var(--white);
-		position: fixed;
+		box-shadow: -1px 4px 5px 0 rgba(0,0,0,0.75);
 		display: grid;
+		position: sticky;
+		z-index: 99999;
 		width: 100%;
 		top: 0;
 	}

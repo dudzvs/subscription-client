@@ -7,8 +7,8 @@ const NavBar = () => {
 	}
 
 	return (
-		<nav className="flex items-center justify-self-center justify-between w-full max-w-7xl">
-			<h2>Origams</h2>
+		<nav className="flex items-center justify-self-center py-2 md:py-0 justify-center md:justify-between w-full md:max-w-9/12 ">
+			<h2 className="hidden md:block">Origams</h2>
 
 			<NavLink to="/login" end>
 				<Button
