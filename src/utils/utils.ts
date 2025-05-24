@@ -1,4 +1,7 @@
-export const postAuthData = async (type: string, data): Promise<string> => {
+export const postAuthData = async (
+	type: string,
+	data: { [key: string]: string | boolean },
+): Promise<string> => {
 	const options = {
 		method: 'POST',
 		headers: {

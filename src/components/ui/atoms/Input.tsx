@@ -18,6 +18,7 @@ const Input = ({
 	return (
 		<>
 			<input
+				className={error ? 'border-red-600' : ''}
 				type={inputType}
 				name={inputName}
 				id={inputName}

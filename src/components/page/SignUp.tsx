@@ -5,7 +5,7 @@ import { NavLink } from 'react-router';
 import useAuthForm from '../../customHooks/authHook.tsx';
 
 const SignUpPage = () => {
-	const { handleSubmit, handleChange, formData } = useAuthForm('signup');
+	const { handleSubmit, handleChange, formData, errors } = useAuthForm('signup');
 
 	function handleClick() {
 		console.log('clicked');
@@ -19,18 +19,24 @@ const SignUpPage = () => {
 				type={'text'}
 				formValue={formData.username}
 				handleChange={handleChange}
+				error={Boolean(errors.username)}
+				errorMessage={errors.username}
 			/>
 			<InputGroup
 				inputLabel={'email'}
 				type={'email'}
 				formValue={formData.email}
 				handleChange={handleChange}
+				error={Boolean(errors.email)}
+				errorMessage={errors.email}
 			/>
 			<InputGroup
 				inputLabel={'password'}
 				type={'password'}
 				formValue={formData.password}
 				handleChange={handleChange}
+				error={Boolean(errors.password)}
+				errorMessage={errors.password}
 			/>
 			<InputGroup
 				type={'checkbox'}
